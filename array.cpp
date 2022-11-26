@@ -30,3 +30,4 @@ int main(){
     printf("sum = %d \n",print_data_cal_sum(a,n));
     return 0;
 }
+
