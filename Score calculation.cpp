@@ -14,11 +14,18 @@ float print_sum(int score[],int n){
     return f_ret;
 }
 
+float add(int x,int y){
+    float ret;
+    printf("%p %p \n ",&x,&y);
+    ret = x+y;
+    return ret;
+}
+
 int main(void)
 {
     int n=5,i;
     int score[5];
-    int u_c = 0;
+    int u_c = 0,temp;
     float aver;
     printf("please input 5 score:\n");
     for(i=0;i<n;i++){
@@ -29,6 +36,9 @@ int main(void)
     }
     aver = print_sum(score,n);
     printf("\nscore average = %f\n",aver);
+    temp = add(score[0],score[1]);
+    printf("too score add = %d\n",temp);
+    printf("%p %p \n ",&score[0],&score[1]);
     if(u_c == 0){
         printf("ALL pass!\n");
     }else{
